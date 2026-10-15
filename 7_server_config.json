@@ -5,12 +5,12 @@
       "args": [
         "-y",
         "@modelcontextprotocol/server-filesystem",
-        "C:\\Users\\admin\\Desktop\\mcp-course"
+        "."
       ]
     },
     "research": {
       "command": "uv",
-      "args": ["run", "C:\\Users\\admin\\Desktop\\mcp-course\\8_research_server.py"]
+      "args": ["run", "8_research_server.py"]
     },
     "fetch": {
       "command": "uvx",

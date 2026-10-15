@@ -5,6 +5,8 @@ from typing import List
 import asyncio
 import anthropic
 import os
+import sys
+from pathlib import Path
 
 load_dotenv()
 
@@ -118,9 +120,10 @@ class MCP_ChatBot:
 
     async def connect_to_server_and_run(self):
         # Create server parameters for stdio connection
+        project_dir = Path(__file__).resolve().parent
         server_params = StdioServerParameters(
-            command=r"C:\Users\admin\Desktop\mcp-course\.venv\Scripts\python.exe",
-            args=[r"C:\Users\admin\Desktop\mcp-course\5_research_server.py"],
+            command=sys.executable,
+            args=[str(project_dir / "5_research_server.py")],
             env=None,
         )
 
